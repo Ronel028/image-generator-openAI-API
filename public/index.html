@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Image generator</title>
+</head>
+<body>
+    <header class="header">
+
+        <!-- navigation -->
+        <nav class="nav">
+            <div class="nav-container container">
+                <h4>Image Generator</h4>
+                <a href="https://beta.openai.com/docs/introduction/overview" target="_blank">OpenAI Docs</a>
+            </div>
+        </nav>
+
+        <!-- main content -->
+        <main class="main">
+            <div class="main-container">
+                <div class="image-container">
+                    <img 
+                        src="" 
+                        alt=""
+                        id="generated-image"
+                    >
+                </div>
+                <div class="loader-container hide" id="loader">
+                    <span class="loader">Generating image</span>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <h3>DESCRIBE WHAT IMAGE YOU WANT.</h3>
+                <form class="form" id="form">
+                    <input 
+                        class="input-text"
+                        id="input-text"
+                        type="text" 
+                        placeholder="describe image what you want to generate..."
+                    >
+                    <button type="submit">Generate Image</button>
+                </form>
+            </div>
+
+        </main>
+
+    </header>
+
+    <footer class="footer">
+            <p>Powered by: <a href="https://beta.openai.com/" target="_blank">OpenAI</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

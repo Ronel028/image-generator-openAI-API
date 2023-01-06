@@ -11,16 +11,18 @@ const openai = new OpenAIApi(config)
 router.post('/generateImage', async(request, response) =>{
     try {
         const generate = await openai.createImage({
-            prompt: 'a white siamese cat',
+            prompt: request.body.imageName,
             n: 1,
-            size:"1024x1024"
+            size:"512x512"
         })
         response.json({
             success: true,
-            generatedImage: generate.data.data[0].url
+            data: generate.data.data[0].url
         })
     } catch (error) {
-        console.log(error)
+        response.json({
+            error: error
+        })
     }
 })
 
